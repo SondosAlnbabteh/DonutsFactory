@@ -1,9 +1,9 @@
 let Message;
   let person = prompt("Please enter your name:");
-
+ var gender = prompt("Please enter your gender:");
   function genderCall(){
 
-  let gender = prompt("Please enter your gender:");
+ 
 
       if (gender.toLowerCase() == "female") {
 
@@ -48,7 +48,7 @@ let Message;
   user_information = "user information: ";
   for(let x=0; x < user_info.length; x++){
 
-    user_information += user_info[x];
+    user_information += user_info[x] +" ";
 
   }
 console.log(user_information);
