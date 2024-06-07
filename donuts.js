@@ -1,9 +1,46 @@
-let Message;
-  let person = prompt("Please enter your name:");
- var gender = prompt("Please enter your gender:");
-  function genderCall(){
+const newDiv = document.createElement("div");
+newDiv.setAttribute("class" , "border border-dark w-50 bg-light");
 
+const newOl = document.createElement("ol");
+
+const newP = document.createElement("p");
+newP.setAttribute("id" , "titleInfo");
+newP.setAttribute("class" , "h4")
+newP.innerHTML = "Person information";
+
+document.getElementById("buttonsec").appendChild(newDiv);
+newDiv.appendChild(newP);
+newDiv.appendChild(newOl);
+
+const herop = document.createElement("h1");
+herop.innerHTML = "Fresh, warm, and ready to brighten your day. Taste the joy!";
+document.getElementById("buttonsec").appendChild(herop);
+
+const Messagehero = document.getElementById("Message");
+
+document.getElementById("buttonsec").insertBefore(herop,Messagehero);
+
+ /********************function add list*********************** */
+
+function addLi(answer){
+
+  const newLi = document.createElement("li");
+  newLi.setAttribute("calss" , "Personinfo" );
+
+  newOl.appendChild(newLi); 
+
+  newLi.innerHTML = answer;
+
+}
+/**************************************************** */
+  let Message;
  
+  let person = prompt("Please enter your name:");
+  addLi(person);
+
+  var gender = prompt("Please enter your gender:");
+
+  function genderCall(){
 
       if (gender.toLowerCase() == "female") {
 
@@ -34,14 +71,21 @@ let Message;
 
     }
 
-
     genderCall(); 
+
+    addLi(gender);
+  
   
     let order = prompt("what is your order? Donut, Coffee, Ice cream or Bakery: ");
+    addLi(order);
+   
+
     alert("your order is getting prepared ");
     
-  document.getElementById("Message").innerHTML = Message;
+    document.getElementById("Message").innerHTML = Message;
 
+  
+ 
 /************************************ */
   let user_info=[person, gender, order];
 
@@ -77,4 +121,6 @@ console.log(user_information);
   }
 /*************************************** */
 
- 
+
+
+
