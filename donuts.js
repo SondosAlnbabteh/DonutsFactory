@@ -21,6 +21,32 @@ const Messagehero = document.getElementById("Message");
 document.getElementById("buttonsec").insertBefore(herop,Messagehero);
 
  /********************function add list*********************** */
+ document.getElementById('submitButton').addEventListener('click', submitForm);
+
+function submitForm(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const age = document.getElementById('age').value;
+    const orderType = document.getElementById('orderType').value;
+    const gender = document.getElementById('gender').value;
+    const cold = document.getElementById('cold').checked;
+    const hot = document.getElementById('hot').checked;
+
+    let temperature = '';
+    if (cold) temperature = 'Cold';
+    if (hot) temperature = (temperature ? temperature + ' and ' : '') + 'Hot';
+
+    const submittedData = `
+        <strong>Name:</strong> ${name}<br>
+        <strong>Age:</strong> ${age}<br>
+        <strong>Order Type:</strong> ${orderType}<br>
+        <strong>Gender:</strong> ${gender}<br>
+        <strong>Drink Temperature:</strong> ${temperature || 'None'}<br>
+    `;
+    
+    addLi(submittedData);
+
+}
 
 function addLi(answer){
 
@@ -35,91 +61,91 @@ function addLi(answer){
 /**************************************************** */
   let Message;
  
-  let person = prompt("Please enter your name:");
-  addLi(person);
 
-  var gender = prompt("Please enter your gender:");
 
-  function genderCall(){
+  // var gender = prompt("Please enter your gender:");
 
-      if (gender.toLowerCase() == "female") {
+  // function genderCall(){
 
-            Message = "Hello Ms " + person + "! Welcome to donuts factort";
+  //     if (gender.toLowerCase() == "female") {
 
-      } else if( gender.toLowerCase() == "male" ) {
+  //           Message = "Hello Ms " + person + "! Welcome to donuts factort";
 
-           Message = "Hello Mr " + person + "! Welcome to donuts factort";
+  //     } else if( gender.toLowerCase() == "male" ) {
 
-      }else{
+  //          Message = "Hello Mr " + person + "! Welcome to donuts factort";
+
+  //     }else{
   
-          while(gender.toLowerCase() != "female" && gender.toLowerCase() != "male" ){
+  //         while(gender.toLowerCase() != "female" && gender.toLowerCase() != "male" ){
 
-              gender =  prompt("Please enter your gender:");
+  //             gender =  prompt("Please enter your gender:");
 
-          if (gender.toLowerCase() == "female") {
+  //         if (gender.toLowerCase() == "female") {
 
-              Message = "Hello Ms " + person + "! Welcome to donuts factort";
+  //             Message = "Hello Ms " + person + "! Welcome to donuts factort";
 
-          } else if( gender.toLowerCase() == "male" ) {
+  //         } else if( gender.toLowerCase() == "male" ) {
 
-              Message = "Hello Mr " + person + "! Welcome to donuts factort";
+  //             Message = "Hello Mr " + person + "! Welcome to donuts factort";
 
-          }
+  //         }
 
-       }
-      }
+  //      }
+  //     }
 
-    }
+  //   }
 
-    genderCall(); 
+ //   genderCall(); 
 
-    addLi(gender);
+  //  addLi(gender);
   
   
-    let order = prompt("what is your order? Donut, Coffee, Ice cream or Bakery: ");
-    addLi(order);
+    // let order = prompt("what is your order? Donut, Coffee, Ice cream or Bakery: ");
+    // addLi(order);
    
 
-    alert("your order is getting prepared ");
+    // alert("your order is getting prepared ");
     
-    document.getElementById("Message").innerHTML = Message;
+   // document.getElementById("Message").innerHTML = Message;
 
   
  
 /************************************ */
-  let user_info=[person, gender, order];
+ // let user_info=[person, gender, order];
 
-  user_information = "user information: ";
-  for(let x=0; x < user_info.length; x++){
+//   user_information = "user information: ";
+//   for(let x=0; x < user_info.length; x++){
 
-    user_information += user_info[x] +" ";
+//     user_information += user_info[x] +" ";
 
-  }
-console.log(user_information);
+//   }
+// console.log(user_information);
 /****************************************** */
 
-  switch(order){
+  // switch(order){
 
-  case "Donut":
-  case "donut":  
-    console.log( person , order );
-    break;
+  // case "Donut":
+  // case "donut":  
+  //   console.log( person , order );
+  //   break;
 
-  case "Coffee":
-  case "coffee":
-    console.log( person , order );
-    break; 
+  // case "Coffee":
+  // case "coffee":
+  //   console.log( person , order );
+  //   break; 
 
-  case "Ice cream":
-  case "ice cream":  
-    console.log( person , order );
-    break;
+  // case "Ice cream":
+  // case "ice cream":  
+  //   console.log( person , order );
+  //   break;
 
-  default:
-    console.log( person , "Bakery" );
+  // default:
+  //   console.log( person , "Bakery" );
   
-  }
+  // }
 /*************************************** */
+
 
 
 
