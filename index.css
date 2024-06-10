@@ -5,10 +5,11 @@
     font-family: sans-serif;
     text-decoration: none;
     color: #000000;
+  
 }
 
 body{
-   background-color: #EAEAEA;
+   background-color: #c2c2c2;
     margin: 0;
   
 }
@@ -59,3 +60,42 @@ body{
 
     /**********end Responsive footer**********/
 }
+/**********************form**********************/
+
+.form-group {
+    margin-bottom: 20px;
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 20px;
+  
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#submittedData{
+    color: black;
+}
+
+
+button {
+    background-color: #d465b7;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #af749e;
+}
+
+

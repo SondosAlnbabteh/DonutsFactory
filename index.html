@@ -40,9 +40,6 @@
     background-size: cover;
     background-repeat: no-repeat;
   ">
-
- 
-
     <div class="d-flex justify-content-center align-items-center h-100">
 
       <div class="text-darck" id="buttonsec">
@@ -50,12 +47,46 @@
         
         <a data-mdb-ripple-init class="btn btn-outline-dark btn-lg mb-5" href="#!" role="button">Call to action</a>
         
-    
-
       </div>
+  
     </div>
   
 </div>
+
+<!------------------------------------------------->
+
+
+<form id="orderForm">
+  <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+  </div>
+  <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+  </div>
+  <div class="form-group">
+      <label for="orderType">Order Type:</label>
+      <input type="text" id="orderType" name="orderType" required>
+  </div>
+  <div class="form-group">
+      <label for="gender">Gender:</label>
+      <input type="text" id="gender" name="gender" required>
+  </div>
+  <div class="form-group">
+    <label>Drink Temperature:</label>
+    <label style="display: inline-flex; margin-right: 3px;">Cold<input type="radio" id="cold" name="temperature" value="cold" required> </label>
+    <label style="display: inline-flex;">Hot<input type="radio" id="hot" name="temperature" value="hot"> </label>
+</div>
+
+  <button type="button" id="submitButton" style="margin-left: 47%;">Submit</button>
+</form>
+
+
+
+
+
+<!------------------------------------------------>
 <!-- Hero -->
       <!-------------------------------------->
       <!----------------footer--------------------->
